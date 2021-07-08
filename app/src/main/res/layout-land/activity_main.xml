@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/input"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/app_background"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/equationView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/displayView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.699"
+        tools:text="Entered equation" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <Button
+                android:id="@+id/sinBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="sinBTN"
+                android:textAllCaps="false"
+                android:text="@string/trigSinText" />
+            <Button
+                android:id="@+id/cosBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="cosBTN"
+                android:textAllCaps="false"
+                android:text="@string/trigCosText"  />
+            <Button
+                android:id="@+id/tanBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="tanBTN"
+                android:textAllCaps="false"
+                android:text="@string/trigTanText"  />
+            <Space
+                android:layout_width="50dp"
+                />
+            <Button
+                android:id="@+id/clearBTN"
+                style="@style/landscape_calcBtn"
+                android:background="@drawable/clear_btn"
+                android:onClick="clearBTN"
+                android:text="@string/clear" />
+
+            <Button
+                android:id="@+id/openParenthesesBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="openParenthesesBTN"
+                android:text="@string/openParentheses" />
+
+            <Button
+                android:id="@+id/closedParenthesesBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="closedParenthesesBTN"
+                android:text="@string/closedParentheses" />
+
+            <ImageButton
+                android:onClick="backspaceBTN"
+                style="@style/landscape_calcBtn"
+                android:contentDescription="@string/backspace"
+                app:srcCompat="@drawable/backspace_btn" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/sinArcBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="sinArcBTN"
+                android:textAllCaps="false"
+                android:text="@string/trigArcSinText" />
+            <Button
+                android:id="@+id/cosArcBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="cosArcBTN"
+                android:textAllCaps="false"
+                android:text="@string/trigArcCosText" />
+            <Button
+                android:id="@+id/tanArcBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="tanArcBTN"
+                android:textAllCaps="false"
+                android:text="@string/trigArcTanText" />
+            <Space
+                android:layout_width="50dp"
+                />
+            <Button
+                android:id="@+id/sevenBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="sevenBTN"
+                android:text="@string/seven" />
+
+            <Button
+                android:id="@+id/eightBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="eightBTN"
+                android:text="@string/eight" />
+
+            <Button
+                android:id="@+id/nineBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="nineBTN"
+                android:text="@string/nine" />
+            <Button
+                android:id="@+id/divideBTN"
+                style="@style/landscape_calcBtn"
+                android:background="@drawable/operator_btn"
+                android:onClick="divideBTN"
+                android:text="@string/divide" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/logBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="logBTN"
+                android:textAllCaps="false"
+                android:text="@string/LogText" />
+            <Button
+                android:id="@+id/natLogBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="naturalLogBTN"
+                android:textAllCaps="false"
+                android:text="@string/naturalLogText" />
+            <Button
+                android:id="@+id/rootBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="rootBTN"
+                android:textAllCaps="false"
+                android:text="@string/squareRootText" />
+            <Space
+                android:layout_width="50dp"
+                />
+            <Button
+                android:id="@+id/fourBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="fourBTN"
+                android:text="@string/four" />
+
+            <Button
+                android:id="@+id/fiveBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="fiveBTN"
+                android:text="@string/five" />
+
+            <Button
+                android:id="@+id/sixBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="sixBTN"
+                android:text="@string/six" />
+
+            <Button
+                android:id="@+id/multiplyBTN"
+                style="@style/landscape_calcBtn"
+                android:background="@drawable/operator_btn"
+                android:onClick="multiplyBTN"
+                android:text="@string/multiply" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/eBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="eBTN"
+                android:textAllCaps="false"
+                android:text="@string/eText" />
+            <Button
+                android:id="@+id/piBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="piBTN"
+                android:textAllCaps="false"
+                android:text="@string/piText" />
+            <Button
+                android:id="@+id/absBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="absBTN"
+                android:textAllCaps="false"
+                android:text="@string/absoluteValueText" />
+            <Space
+                android:layout_width="50dp"
+                />
+            <Button
+                android:id="@+id/oneBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="oneBTN"
+                android:text="@string/one" />
+
+            <Button
+                android:id="@+id/twoBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="twoBTN"
+                android:text="@string/two" />
+
+            <Button
+                android:id="@+id/threeBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="threeBTN"
+                android:text="@string/three" />
+
+            <Button
+                android:id="@+id/subtractBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="subtractBTN"
+                android:background="@drawable/operator_btn"
+                android:text="@string/subtract" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/primeBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="primeBTN"
+                android:textAllCaps="false"
+                android:text="@string/isPrimeFunctionText" />
+            <Button
+                android:id="@+id/squareBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="squareBTN"
+                android:textAllCaps="false"
+                android:text="@string/xSquaredText" />
+            <Button
+                android:id="@+id/xOnExponentBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="xOnExponentBTN"
+                android:textAllCaps="false"
+                android:text="@string/xPowerYText" />
+            <Space
+                android:layout_width="50dp"
+                />
+            <Button
+                android:id="@+id/zeroBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="zeroBTN"
+                android:text="@string/zero" />
+
+            <Button
+                android:id="@+id/pointBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="pointBTN"
+                android:text="@string/point" />
+            <Button
+                android:id="@+id/equalsBTN"
+                style="@style/landscape_calcBtn"
+                android:background="@drawable/equals_btn"
+                android:onClick="equalsBTN"
+                android:text="@string/equals" />
+            <Button
+                android:id="@+id/addBTN"
+                style="@style/landscape_calcBtn"
+                android:onClick="addBTN"
+                android:background="@drawable/operator_btn"
+                android:text="@string/add" />
+
+        </TableRow>
+    </TableLayout>
+
+    <EditText
+        android:id="@+id/displayView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="@string/display"
+        android:importantForAutofill="no"
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:textAlignment="viewEnd"
+        android:textColor="@color/white"
+        android:textColorHint="@color/greyAccent"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toTopOf="@+id/tableLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
